@@ -1,0 +1,178 @@
+MyAppMobileBundle_homepage:
+    pattern:  /
+    defaults: { _controller: MyAppMobileBundle:Default:index }
+    
+MyAppMobileBundle_filtreListes_forfait:
+    pattern:  /forfaits_{categorie}.html
+    defaults: { _controller: MyAppMobileBundle:Forfait:forfaitIndex, categorie:categorie }
+    
+MyAppMobileBundle_filterDropDownList_forfait_en:
+    pattern:  /packages_{categorie}.html
+    defaults: { _controller: MyAppMobileBundle:Forfait:forfaitIndex, categorie:categorie }
+    
+MyAppMobileBundle_hebergement:
+    pattern:  /hebergements.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:hebergementIndex }
+    
+MyAppMobileBundle_hebergement_region_ajax:
+    pattern:  /hebergements_region.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:hebergementRegionAjax }
+    requirements:
+        _method: POST
+        
+MyAppMobileBundle_hebergement_ville_ajax:
+    pattern:  /hebergements_ville.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:hebergementVilleAjax }
+    requirements:
+        _method: POST
+        
+MyAppMobileBundle_hebergement_resultat_canada:
+    pattern:  /hebergements_resultats_canada.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:hebergementResultatCanada }
+    requirements:
+        _method: POST
+        
+MyAppMobileBundle_hebergement_resultat_province_ajax:
+    pattern:  /hebergements_province_{id}.html/{page}
+    defaults: { _controller: MyAppMobileBundle:Hebergement:hebergementResultatProvinceAjax, id:id, page:page }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_hebergement_resultat_region_ajax:
+    pattern:  /hebergements_resultats_region_{id}.html/{page}
+    defaults: { _controller: MyAppMobileBundle:Hebergement:hebergementResultatRegionAjax, id:id, page:page }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_hebergement_resultat_ville_ajax:
+    pattern:  /hebergements_resultats_{id}.html/{page}
+    defaults: { _controller: MyAppMobileBundle:Hebergement:hebergementResultatVilleAjax, id:id, page:page }
+    requirements:
+        _method: GET   
+        
+mobile_generic_detail:
+    pattern:  /{section}_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:genericCustomer, section:section, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_detail_hebergement:
+    pattern:  /hebergements_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:hebergementDetail, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_detail_chambre:
+    pattern:  /chambres_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:chambreDetail, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_detail_forfait:
+    pattern:  /forfaits_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:forfaitDetail, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_detail_corporatif:
+    pattern:  /corporatif_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:corporatifDetail, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_detail_activite:
+    pattern:  /activites_services_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:activiteDetail, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_detail_galerie:
+    pattern:  /galerie_photo_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:galerieDetail, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_detail_sante:
+    pattern:  /centre_sante_spa_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:santeDetail, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_detail_restaurant:
+    pattern:  /restaurant_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:restaurantDetail, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_detail_information:
+    pattern:  /information_reservation_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:informationDetail, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_detail_direction:
+    pattern:  /direction_routieres_{id}.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:directionDetail, id:id }
+    requirements:
+        _method: GET
+        
+MyAppMobileBundle_demande_reservation:
+    pattern: /demande_reservation.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:demandeReservation}
+#    requirements:
+#        _method: GET
+    
+MyAppMobileBundle_hebergement_en:
+    pattern:  /accommodation.html
+    defaults: { _controller: MyAppMobileBundle:Hebergement:hebergementIndex }
+    
+MyAppMobileBundle_forfait:
+    pattern:  /forfaits.html
+    defaults: { _controller: MyAppMobileBundle:Forfait:forfaitIndex }
+    
+MyAppMobileBundle_forfait_en:
+    pattern:  /packages.html
+    defaults: { _controller: MyAppMobileBundle:Forfait:forfaitIndex }
+    
+MyAppMobileBundle_corpo:
+    pattern:  /corporatif_evenement.html
+    defaults: { _controller: MyAppMobileBundle:Corpo:corpoIndex }
+    
+MyAppMobileBundle_corpo_en:
+    pattern:  /corporate_events.html
+    defaults: { _controller: MyAppMobileBundle:Corpo:corpoIndex }
+    
+MyAppMobileBundle_promotion:
+    pattern:  /tarifs_derniere_minute_et_promotions.html
+    defaults: { _controller: MyAppMobileBundle:Promotion:promotionIndex }
+    
+MyAppMobileBundle_promotion_en:
+    pattern:  /last_minute_deals_and_promotions.html
+    defaults: { _controller: MyAppMobileBundle:Promotion:promotionIndex }
+  
+MyAppMobileBundle_sante:
+    pattern:  /centres_sante_spas.html
+    defaults: { _controller: MyAppMobileBundle:Sante:SanteIndex }
+    
+MyAppMobileBundle_sante_en:
+    pattern:  /health_centers_spas.html
+    defaults: { _controller: MyAppMobileBundle:Sante:SanteIndex }
+    
+MyAppMobileBundle_attrait:
+    pattern:  /attraits_activites.html
+    defaults: { _controller: MyAppMobileBundle:Attrait:attraitIndex }
+    
+MyAppMobileBundle_attrait_en:
+    pattern:  /activities_attractions.html
+    defaults: { _controller: MyAppMobileBundle:Attrait:attraitIndex }
+    
+MyAppMobileBundle_restaurant:
+    pattern:  /restaurants.html
+    defaults: { _controller: MyAppMobileBundle:Restaurant:restaurantIndex }
+    
+MyAppMobileBundle_restaurant_en:
+    pattern:  /restaurants-en.html
+    defaults: { _controller: MyAppMobileBundle:Restaurant:restaurantIndex }
+    
+
+ 
